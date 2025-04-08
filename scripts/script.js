@@ -50,3 +50,5 @@ resetLink.addEventListener('click', () => {
     resultTab.classList.add('hidden')
     image.classList.remove('hidden');
 })
+
+// if (input)
