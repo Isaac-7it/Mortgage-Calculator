@@ -1,0 +1,262 @@
+.pl-0 {
+  padding-left: 0 !important;
+}
+
+.pb-md {
+  padding-bottom: 1.6rem !important;
+}
+
+*,
+*::after,
+*::before {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+html {
+  font-size: 62.5%;
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: "Plus Jakarta Sans", sans-serif;
+  height: 100vh;
+}
+
+main {
+  padding: 2.4rem;
+  padding-bottom: 0;
+}
+
+.form {
+  color: hsl(200, 26%, 54%);
+}
+.form__sub {
+  flex: 1;
+}
+.form__sub--box {
+  padding-bottom: 1.6rem;
+}
+.form__sub:nth-of-type(2) {
+  background: hsl(202, 55%, 16%);
+  padding: 1.6rem;
+  text-align: center;
+}
+.form__sub:nth-of-type(2) .pre-result--text {
+  font-size: 1.4rem;
+}
+.form__label-box,
+.form .box,
+.form .radio-box {
+  transition: all 0.15s cubic-bezier(0.165, 0.84, 0.44, 1);
+}
+.form__label-box {
+  display: flex;
+  height: 4rem;
+  border: 1px solid currentColor;
+  border-radius: 4px;
+  padding-left: 0.8rem;
+}
+.form__label-box:has(.form__input:focus) {
+  border: 1px solid hsl(61, 70%, 52%);
+  background: rgba(215.424, 218.28, 46.92, 0.1);
+}
+.form__label-box .box {
+  background-color: hsl(202, 86%, 94%);
+  font-size: 1.6rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.form__label-box .relative {
+  position: relative;
+  color: hsl(202, 55%, 16%);
+}
+.form__label-box .radio-box {
+  display: inline-block;
+  height: 1.4rem;
+  aspect-ratio: 1/1;
+  border-radius: 50%;
+  background-color: currentColor;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+.form__label-box .radio-box:first-of-type {
+  background-color: #fff;
+  border: 1.5px solid currentColor;
+  height: 2rem;
+  aspect-ratio: 1/1;
+}
+.form__label-box .radio-box:nth-of-type(2) {
+  visibility: hidden;
+}
+.form__label-box .box:has(+ .form__input:focus),
+.form__label-box .form__input:focus + .box {
+  background-color: hsl(61, 70%, 52%);
+  color: hsl(202, 55%, 16%);
+}
+.form__label-box .icon-box {
+  flex-basis: 14%;
+}
+.form__label-box .icon-box--1 {
+  border-top-left-radius: 4px;
+  border-bottom-left-radius: 4px;
+}
+.form__label-box .icon-box--2 {
+  border-top-right-radius: 4px;
+  border-bottom-right-radius: 4px;
+}
+.form__label-box .font-box {
+  flex-basis: 35%;
+  font-weight: 700;
+  border-top-right-radius: 4px;
+  border-bottom-right-radius: 4px;
+}
+.form__label-box .mortgage-type {
+  font-size: 1.6rem;
+  font-weight: 700;
+  color: hsl(202, 55%, 16%);
+}
+.form__label-box--type {
+  display: flex;
+  justify-content: start;
+  align-items: center;
+  gap: 1.6rem;
+}
+.form__label-box--type:not(:last-of-type) {
+  margin-bottom: 0.8rem;
+}
+.form__label-box--type:last-of-type {
+  margin-bottom: 1.6rem;
+}
+.form__label-box--type:has(.form__input:checked) {
+  background-color: rgba(215.424, 218.28, 46.92, 0.1);
+}
+.form .result-heading {
+  color: #fff;
+}
+.form__heading {
+  color: hsl(202, 55%, 16%);
+  font-size: 2rem;
+}
+.form__link:link, .form__link:visited {
+  text-decoration: underline;
+}
+.form__link, .form__input--heading {
+  font-size: 14px;
+  color: hsl(200, 26%, 54%);
+}
+.form__input {
+  font-size: 1.8rem;
+  font-weight: 700;
+  flex: 1;
+  border: none;
+  color: hsl(202, 55%, 16%);
+}
+.form__input:focus {
+  background: rgba(215.424, 218.28, 46.92, 0.048);
+  border: none;
+  outline: none;
+}
+.form__input--radio {
+  flex: none;
+}
+.form__input--heading {
+  margin-bottom: 0.8rem;
+  display: inline-block;
+}
+.form__input--amount {
+  margin-left: 0.8rem;
+}
+.form__btn {
+  font-size: 1.8rem;
+  font-weight: 700;
+  color: hsl(202, 55%, 16%);
+  background-color: hsl(61, 70%, 52%);
+  padding: 1.2rem 2.4rem;
+  width: 100%;
+  border: none;
+  border-radius: 2.4rem;
+  text-decoration: none;
+  display: inline-block;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 0.8rem;
+}
+.form .result-heading {
+  margin-bottom: 1.6rem;
+}
+.form .pre-result--text {
+  display: inline-block;
+}
+.form .input-focus {
+  border: 1px solid hsl(61, 70%, 52%);
+}
+.form .form__input--radio:checked ~ .radio-box {
+  visibility: visible;
+  border-color: hsl(61, 70%, 52%);
+}
+.form .form__input--radio:checked ~ .radio-box:nth-of-type(2) {
+  background-color: hsl(61, 70%, 52%);
+}
+.form .hidden {
+  display: none !important;
+}
+.form .block {
+  display: block !important;
+}
+.form__result {
+  font-weight: 700;
+  font-size: 4rem;
+  color: hsl(61, 70%, 52%);
+}
+.form__result::after {
+  content: "";
+  display: block;
+  width: 100%;
+  height: 0.1px;
+  background-color: #fff;
+  margin-top: 0.8rem;
+}
+.form__result--sub {
+  font-size: 2.5rem;
+  color: #fff;
+}
+.form__result--tab {
+  text-align: left;
+}
+.form__result--tab .result-tab--text {
+  margin-bottom: 1.6rem;
+}
+.form__result--box {
+  background: hsl(202, 55%, 16%);
+  padding: 1.6rem;
+  border-radius: 4px;
+  box-shadow: 0 0 0.8rem 1px rgba(0, 0, 0, 0.4666666667);
+  background: hsl(198, 56%, 8%);
+  position: relative;
+  padding: 2.4rem;
+  display: block !important;
+  z-index: 1;
+}
+.form__result--box > :not(:last-child) {
+  margin-bottom: 0.8rem;
+}
+.form__result--box::before {
+  position: absolute;
+  top: -10000px;
+  left: 0;
+  content: "";
+  display: inline-block;
+  width: 100%;
+  height: 100%;
+  background-color: hsl(61, 70%, 52%);
+  border-radius: 4px;
+  z-index: -1;
+}
+
+/*# sourceMappingURL=style.css.map */

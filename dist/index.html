@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- displays site properly based on user's device -->
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:ital,wght@0,200..800;1,200..800&display=swap"
+    rel="stylesheet">
+
+  <link rel="icon" type="image/png" sizes="32x32" href="./assets/images/favicon-32x32.png">
+  <link rel="stylesheet" href="../build/style.css">
+  <title>Frontend Mentor | Mortgage repayment calculator</title>
+
+  <script src="https://kit.fontawesome.com/2badffd322.js" crossorigin="anonymous"></script>
+
+  <!-- <style>
+    .attribution {
+      font-size: 11px;
+      text-align: center;
+    }
+
+    .attribution a {
+      color: hsl(228, 45%, 44%);
+    }
+  </style> -->
+</head>
+
+<body>
+  <main>
+    <form action="#" class="form">
+      <div class="form__sub">
+        <div class="form__sub--box">
+          <h1 class="form__heading">Mortgage Calculator</h1>
+          <a href="#" class="form__link">Clear All</a>
+        </div>
+        <div class="form__sub--box">
+          <span class="form__input--heading">Mortgage Amount</span>
+          <label for="#" class="form__label-box pl-0">
+            <span class="box icon-box icon-box--1">
+              <i class="fa-solid fa-euro-sign"></i>
+            </span>
+            <input type="number" class="form__input form__input--amount" required name="amount">
+          </label>
+        </div>
+        <div class="form__sub--box">
+          <span class="form__input--heading">Mortgage Term</span>
+          <label for="#" class="form__label-box">
+            <input type="number" class="form__input" required name="term">
+            <span class="box font-box">
+              years
+            </span>
+          </label>
+        </div>
+        <div class="form__sub--box">
+          <span class="form__input--heading">Interest Rate</span>
+          <label for="#" class="form__label-box">
+            <input step="any" type="number" class="form__input" required name="rate">
+            <span class="box icon-box icon-box icon-box--2">
+              <i class="fa-solid fa-percent"></i>
+            </span>
+          </label>
+        </div>
+        <div class="form__sub--box">
+          <span class="form__input--heading">Mortgage Type</span>
+          <label for="checked--1" class="form__label-box form__label-box--type">
+            <div class="relative">
+              <input id="checked--1" name="checked" type="radio" class="form__input form__input--radio" required>
+              <span class="radio-box"></span><span class="radio-box"></span>
+            </div>
+            <span class="mortgage-type">
+              Repayment
+            </span>
+          </label>
+          <label for="checked--2" class="form__label-box form__label-box--type">
+            <div class="relative">
+              <input id="checked--2" name="checked" type="radio" class="form__input form__input--radio" required>
+              <span class="radio-box"></span>
+              <span class="radio-box"></span>
+            </div>
+            <span class="mortgage-type">
+              Interest Only
+            </span>
+          </label>
+          <button type="submit" class="form__btn">
+            <i class="fa-solid fa-calculator"></i>
+            Calculate Repayments
+          </button>
+        </div>
+      </div>
+      <div class="form__sub">
+        <div class="form__result--hidden">
+          <img src="../assets/images/illustration-empty.svg" alt="Empty Image" class="form__img">
+          <h4 class="form__heading result-heading">Results are shown here</h4>
+          <p class="pre-result--text">Complete the form and click "calculate repayments" to see what your monthly
+            repayments would be.</p>
+        </div>
+
+        <div class="form__result--tab hidden">
+          <h4 class="form__heading result-heading">Your results</h4>
+          <p class="pre-result--text result-tab--text">Your results are shown below based on the information you provided.
+            To adjust the results, edit the form and click “calculate repayments” again.</p>
+
+          <div class="pre-result--text form__result--box">
+            <span class="form__result--text">Your monthly repayments</span>
+
+            <h2 class="form__result">&euro;1200</h2>
+            <span class="line">&nbsp;</span>
+            <span class="pre-result--text form__result--text">Total you'll repay over the term</span>
+            <h5 class="form__result--sub">&euro;600</h5>
+          </div>
+        </div>
+
+      </div>
+    </form>
+  </main>
+
+  <!-- JS -->
+  <script src="../scripts/script.js"></script>
+</body>
+
+</html>
