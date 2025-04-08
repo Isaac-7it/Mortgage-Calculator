@@ -31,10 +31,10 @@
 </head>
 
 <body>
-  <main>
+  <main class="main">
     <form action="#" class="form">
-      <div class="form__sub">
-        <div class="form__sub--box">
+      <div class="form__sub left-section">
+        <div class="form__sub--box header">
           <h1 class="form__heading">Mortgage Calculator</h1>
           <a href="#" class="form__link">Clear All</a>
         </div>
@@ -47,25 +47,27 @@
             <input type="number" class="form__input form__input--amount" required name="amount">
           </label>
         </div>
-        <div class="form__sub--box">
-          <span class="form__input--heading">Mortgage Term</span>
-          <label for="#" class="form__label-box">
-            <input type="number" class="form__input" required name="term">
-            <span class="box font-box">
-              years
-            </span>
-          </label>
+        <div class="form__section">
+          <div class="form__sub--box section-box--1">
+            <span class="form__input--heading">Mortgage Term</span>
+            <label for="#" class="form__label-box label-box">
+              <input type="number" class="form__input section-input" required name="term">
+              <span class="box font-box">
+                years
+              </span>
+            </label>
+          </div>
+          <div class="form__sub--box section-box--2">
+            <span class="form__input--heading">Interest Rate</span>
+            <label for="#" class="form__label-box label-box">
+              <input step="any" type="number" class="form__input section-input" required name="rate">
+              <span class="box icon-box icon-box icon-box--2">
+                <i class="fa-solid fa-percent"></i>
+              </span>
+            </label>
+          </div>
         </div>
-        <div class="form__sub--box">
-          <span class="form__input--heading">Interest Rate</span>
-          <label for="#" class="form__label-box">
-            <input step="any" type="number" class="form__input" required name="rate">
-            <span class="box icon-box icon-box icon-box--2">
-              <i class="fa-solid fa-percent"></i>
-            </span>
-          </label>
-        </div>
-        <div class="form__sub--box">
+        <div class="form__sub--box last-box">
           <span class="form__input--heading">Mortgage Type</span>
           <label for="checked--1" class="form__label-box form__label-box--type">
             <div class="relative">
@@ -92,7 +94,7 @@
           </button>
         </div>
       </div>
-      <div class="form__sub">
+      <div class="form__sub right-section">
         <div class="form__result--hidden">
           <img src="../assets/images/illustration-empty.svg" alt="Empty Image" class="form__img">
           <h4 class="form__heading result-heading">Results are shown here</h4>
@@ -102,7 +104,8 @@
 
         <div class="form__result--tab hidden">
           <h4 class="form__heading result-heading">Your results</h4>
-          <p class="pre-result--text result-tab--text">Your results are shown below based on the information you provided.
+          <p class="pre-result--text result-tab--text">Your results are shown below based on the information you
+            provided.
             To adjust the results, edit the form and click “calculate repayments” again.</p>
 
           <div class="pre-result--text form__result--box">

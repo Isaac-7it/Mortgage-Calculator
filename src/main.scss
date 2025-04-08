@@ -12,6 +12,8 @@ $md: 1.6rem;
 $lg: 2.4rem;
 $xl: 3.2rem;
 $xxl: 4.8rem;
+$tablet: 768px;
+$desktop: 1024px;
 
 .pl-0 {
   padding-left: 0 !important;
@@ -209,6 +211,7 @@ main {
   //////////////////////
 
   &__input {
+    max-width: 100%;
     font-size: 1.8rem;
     font-weight: $weight-solid;
     flex: 1;
@@ -293,7 +296,7 @@ main {
       display: block;
       width: 100%;
       height: 0.1px;
-      background-color: #fff;
+      background-color: #ffffff17;
       margin-top: $sm;
     }
 
@@ -305,7 +308,7 @@ main {
 
   &__result--tab {
     text-align: left;
-  
+
     .result-tab--text {
       margin-bottom: $md;
     }
@@ -337,6 +340,102 @@ main {
       background-color: $color-lime;
       border-radius: 4px;
       z-index: -1;
+    }
+  }
+}
+
+@media only screen and (min-width: $tablet) {
+  html {
+    font-size: 68.75%;
+  }
+
+  body {
+    @include defaultFlex(center, center);
+    height: 100vh;
+  }
+
+  .main {
+    max-width: 70%;
+    height: 70%;
+    // padding: $md;
+  }
+
+  .form {
+    @include defaultFlex(center, stretch);
+    background: #fff;
+    box-shadow: 2px 2px 15px 2px rgba(0, 0, 0, 0.25);
+    border-radius: $md;
+    // height: 85%;
+    // padding: $md;
+
+    .header {
+      @include defaultFlex(space-between, center);
+    }
+
+    .last-box {
+      padding-bottom: 0;
+    }
+
+    &__sub:nth-of-type(1) {
+      padding: $md;
+    }
+
+    &__sub:nth-of-type(2) {
+      border-bottom-left-radius: $xxl;
+      border-top-right-radius: $md;
+      border-bottom-right-radius: $md;
+    }
+
+    &__result {
+      margin-bottom: $lg !important;
+
+      &::after {
+        margin-top: $lg !important;
+      }
+    }
+  }
+}
+
+@media only screen and (min-width: $desktop) {
+  html {
+    font-size: 75%;
+  }
+
+  .form {
+    &__sub:nth-of-type(1) {
+      padding: $lg;
+    }
+
+    .left-section {
+      max-width: 52%;
+      flex-basis: 50%;
+    }
+
+    .right-section {
+      flex-basis: 50%;
+      max-width: 48%;
+    }
+
+    &__section {
+      @include defaultFlex(space-between, center);
+    }
+
+    .section-box--1,
+    .section-box--2 {
+      max-width: 48%;
+      // background: #000;
+    }
+
+    .label-box {
+      justify-content: space-between;
+    }
+
+    .icon-box--2 {
+      flex-basis: 25%;
+    }
+
+    .section-input {
+      max-width: 50%;
     }
   }
 }
